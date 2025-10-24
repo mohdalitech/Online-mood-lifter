@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response</title>
+    <link rel="stylesheet"href="style.css">
+</head>
+<body>
+<h1>Talk-Change your mood</h1>
+<br>
+<p>This is a very interactive site where you have to use your responses by clicking the button and type text whenever asked for.</p>
+<br>
+<b id="msg1">What is your name?</b>
+<input type="text" placeholder="First name" id="name" required>
+<button onclick="firsttask()"id="submit">Submit your name</button>
+<script src="script.js"></script>
+<p>Your userid:-</p>
+<p id="userid"></p>
+<p class="warning">[Don't share your id!]Use your this ID only to proceed further</p>
+<br>
+<b id="msg2">Respond to Greeting: Hello there!</b>
+<button id="choice1"onclick="Yes()">Hi</button> OR
+<button id="choice2" onclick="No()">Don't want</button>
+</body>
+</html>
