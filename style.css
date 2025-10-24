@@ -3,3 +3,18 @@
     font-weight: bolder;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+#select{
+    width:150px;
+    height:20px;
+    font-size: 12px;
+}
+img{
+    height:400px;
+    width:700px;
+    border:1px solid black;
+}
+iframe{
+    height:400px;
+    width:700px;
+    border:1px solid black;
+}
