@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #correct{
+        color:green;
+        width:50px;
+    }
+    #wrong{
+        color:red;
+        width:50px;  
+    }
+    #welcome_msg{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color:blue;
+        text-decoration: underline;
+        
+    }
+    h3{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color:cadetblue;
+        text-decoration: underline;
+    }
+    #confirm{
+        color:white;
+        background-color: green;
+    }
+    th,td{
+        border:1px solid black;
+        width:150px;
+    }
+    table{
+        border-collapse:collapse;
+    }
+    td{
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+<body>
+<b id="welcome_msg">WELCOME TO THIS EXCITING PAGE</b>
+<br>
+<h3>General Instructions:--</h3>
+<ul>
+    <li>You will be asked 5 riddles</li> 
+    <li>Answering each one them correct:</li>
+    <li><b id="correct">+4 </b></li> 
+    <li>Answering any wrong answer will penaty:</li>
+    <li><b id="wrong">-1 </b></li>
+    <li>Enter your answer in small letters</li>
+</ul>
+<button id="confirm" onclick="Send()">Ready?</button>
+<h3>Your total points:-</h3>
+<p id="score"></p>
+<h3>Your Performance Analysis:</h3>
+<br>
+<table>
+    <thead>
+        <tr>
+            <th>Question No.</th>
+            <th>Your answer</th>
+            <th>Correct Answer</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tr>
+        <td>1</td>
+        <td id="user1"></td>
+        <td id="corr1"></td>
+        <td id="status1"></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td id="user2"></td>
+        <td id="corr2"></td>
+        <td id="status2"></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td id="user3"></td>
+        <td id="corr3"></td>
+        <td id="status3"></td
+    </tr>
+    <tr>
+        <td>4</td>
+        <td id="user4"></td>
+        <td id="corr4"></td>
+        <td id="status4"></td
+    </tr>
+    <tr>
+        <td>5</td>
+        <td id="user5"></td>
+        <td id="corr5"></td>
+        <td id="status5"></td
+    </tr>
+
+</table>
+</body>
+<script>
+    let col1=document.getElementById("user1");//1
+    let col2=document.getElementById("corr1");
+    let col3=document.getElementById("status1");//3
+    let col4=document.getElementById("user2");//4
+    let col5=document.getElementById("corr2");
+    let col6=document.getElementById("status2");//6
+    let col7=document.getElementById("user3");//7
+    let col8=document.getElementById("corr3");
+    let col9=document.getElementById("status3");//9
+    let col10=document.getElementById("user4");//10
+    let col11=document.getElementById("corr4");
+    let col12=document.getElementById("status4");//12
+    let col13=document.getElementById("user5");//13
+    let col14=document.getElementById("corr5");
+    let col15=document.getElementById("status5");//15
+    function Send(){
+    let marks=document.getElementById("score");
+    let points=0;
+    let ques_1=alert("Question 1: The more of me you take, the more you leave behind. What am I?");
+    let ans_1=prompt("Enter your answer..");
+    let ques_2=alert("Question 2: I'm not alive, but I can grow. I don't have lungs, but I need air. I don't have a mouth, but water kills me. What am I?");
+    let ans_2=prompt("Enter your answer..");
+    let ques_3=alert("Question 3: I have cities, but no houses. I have forests, but no trees. I have water, but no fish. What am I?");
+    let ans_3=prompt("Enter your answer..");
+    let ques_4=alert("Question 4: What instrument can you hear but never see or touch?");
+    let ans_4=prompt("Enter your answer..");
+    let ques_5=alert("Question 5: I turn once, what is out will not get in. I turn again, what is in will not get out. What am I?");
+    let ans_5=prompt("Enter your answer..");
+    let corr_ans=["footstep","fire","map","voice","key"];
+    let user_ans=[];
+    user_ans.push(ans_1,ans_2,ans_3,ans_4,ans_5);
+    for(i=0;i<5;i++){
+     if(user_ans[i]===corr_ans[i]){
+      points+=4;
+}
+     else if (user_ans[i]!==corr_ans[i]){
+        points-=1;
+     }
+     else{
+       col3.innerText=col6.innerText=col9.innerText=col12.innerText=col15.innerText="Not attempted";
+     }
+    col1.innerText = user_ans[0];
+    col4.innerText = user_ans[1];
+    col7.innerText = user_ans[2];
+    col10.innerText = user_ans[3];
+    col13.innerText = user_ans[4];
+    col2.innerText = corr_ans[0];
+    col5.innerText = corr_ans[1];
+    col8.innerText = corr_ans[2];
+    col11.innerText = corr_ans[3];
+    col14.innerText = corr_ans[4];
+    col3.innerText = (user_ans[0] === corr_ans[0]) ? "Correct" : "Wrong";
+    col6.innerText = (user_ans[1] === corr_ans[1]) ? "Correct" : "Wrong";
+    col9.innerText = (user_ans[2] === corr_ans[2]) ? "Correct" : "Wrong";
+    col12.innerText = (user_ans[3] === corr_ans[3]) ? "Correct" : "Wrong";
+    col15.innerText = (user_ans[4] === corr_ans[4]) ? "Correct" : "Wrong";
+     marks.innerText=points+"/20";
+     marks.style.fontFamily="'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif";
+     if(points>=0){
+     marks.style.color="green";
+     marks.style.fontSize="20px";
+    }
+    if(points<0){
+     marks.style.color="red";
+     marks.style.fontSize="20px";  
+    }
+}
+    }
+</script>
+</html>
