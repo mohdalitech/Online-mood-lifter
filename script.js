@@ -29,20 +29,26 @@ let video=document.getElementById("video")
 if(mood_1==="Calm🧘"){
     image.src="calm.png";
     video.src="https://www.youtube.com/embed/ZToicYcHIOU?si=6KgYaOXmPLd3mav-"; 
+    document.body.style.backgroundColor="#A7C7E7";
 }
 if(mood_1==="Busy🧠"){
     image.src="busy.png";
     video.src="https://www.youtube.com/embed/HGn5XJtwmAY?si=HhCf6wD82aZkG433";
+    document.body.style.backgroundColor="#FFD580";
 }
 if(mood_1==="Overthinking😵")
 {
     image.src="overthink.png";
     video.src="https://www.youtube.com/embed/m1RGFegL83c?si=EFbXtB7dC9_n9KI4";
+    document.body.style.backgroundColor="#D1C4E9";
 }
 if(mood_1==="Peaceful🌿")
 {
     image.src="peace.png";
     video.src="https://www.youtube.com/embed/KLuTLF3x9sA?si=JQu2HijlVatpGxA6";
+    document.body.style.backgroundColor="#C8E6C9";
 }
 }
+}
+
 
