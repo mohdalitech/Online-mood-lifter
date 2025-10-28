@@ -50,5 +50,9 @@ if(mood_1==="Peaceful🌿")
 }
 }
 }
+window.firsttask = firsttask;
+window.Yes = Yes;
+window.No = No;
+window.mood = mood;
 
 
