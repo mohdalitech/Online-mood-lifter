@@ -14,7 +14,6 @@
 <b id="msg1">What is your name?</b>
 <input type="text" placeholder="First name" id="name" required>
 <button onclick="firsttask()"id="submit">Submit your name</button>
-<script src="script.js"></script>
 <p>Your userid:-</p>
 <p id="userid"></p>
 <p class="warning">[Don't share your id!]Use your this ID only to proceed further</p>
@@ -41,9 +40,62 @@
 <br>
 <iframe src="" id="video"></iframe>
 <a href="excite.html"><h3 style="color:red">TRY SOMETHING EXCITING!</h3></a>
-<script src="script.js?v=2"></script>
+<script >
+    function firsttask(){
+    let name=document.getElementById("name").value;
+    let task1=document.getElementById("userid");
+    let id=name[0]+name.length+name.slice(1);
+    task1.innerText=id;
+    task1.style.color="green";
+}
+function Yes(){
+    alert("Your positive response is appreciated!");
+    let btn1=document.getElementById("choice1");
+    let btn2=document.getElementById("choice2");
+    btn1.disabled=true;
+    btn2.disabled=true;
+}
+function No(){
+    let btn1=document.getElementById("choice1");
+    let btn2=document.getElementById("choice2");
+    let name=document.getElementById("name").value;
+    alert("Why so ? Enter your reason in pop-up box:");
+    let reason =prompt("Enter your reason:");
+    alert(`Very sorry for you ${name},for your reason ${reason} of not responding to greeting..`);
+    btn1.disabled=true;
+    btn2.disabled=true;
+}
+function mood(){
+let mood_1=document.getElementById("select").value;
+let image=document.getElementById("image");
+let video=document.getElementById("video")
+if(mood_1==="Calm🧘"){
+    image.src="calm.png";
+    video.src="https://www.youtube.com/embed/ZToicYcHIOU?si=6KgYaOXmPLd3mav-"; 
+    document.body.style.backgroundColor="#A7C7E7";
+}
+if(mood_1==="Busy🧠"){
+    image.src="busy.png";
+    video.src="https://www.youtube.com/embed/HGn5XJtwmAY?si=HhCf6wD82aZkG433";
+    document.body.style.backgroundColor="#FFD580";
+}
+if(mood_1==="Overthinking😵")
+{
+    image.src="overthink.png";
+    video.src="https://www.youtube.com/embed/m1RGFegL83c?si=EFbXtB7dC9_n9KI4";
+    document.body.style.backgroundColor="#D1C4E9";
+}
+if(mood_1==="Peaceful🌿")
+{
+    image.src="peace.png";
+    video.src="https://www.youtube.com/embed/KLuTLF3x9sA?si=JQu2HijlVatpGxA6";
+    document.body.style.backgroundColor="#C8E6C9";
+}
+}
+</script>
 </body>
 </html>
+
 
 
 
